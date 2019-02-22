@@ -1,0 +1,2 @@
+# hxTShopify
+haxe Shopify Typedefs
