@@ -15,7 +15,7 @@ class Transfer{
                                               , log:    String->Void ){
         for( i in 0...productNames.length ){
             var nom = productNames[ i ];
-            Transfer.productCreate(  italian, vera, '?title=$nom', priceFactory, loaded, log );
+            Transfer.productCreate(  from_, to_, '?title=$nom', priceFactory, loaded, log );
         }
     }
     public static function productCreate( from_:        Shop
