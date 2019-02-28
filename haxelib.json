@@ -1,0 +1,12 @@
+{
+    "name"         : "hxTShopify",
+    "url"          : "https://github.com/nanjizal/hxTShopify#hxTShopify",
+    "license"      : "MIT",
+    "tags"         : ["nodejs","js"],
+    "description"  : "haxe Shopify Typedefs, and shopify REST api helpers",
+    "version"      : "0.0.1",
+    "releasenote"  : "See https://github.com/nanjizal/hxTShopify/blob/master/CHANGELOG.md",
+    "classPath"    : "src",
+    "contributors" : ["Nanjizal"],
+    "dependencies" : {}
+}

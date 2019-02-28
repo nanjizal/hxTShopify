@@ -62,6 +62,15 @@ abstract ProductCloner( Product ) to Product {
         for( i in 0...l ) p1.variants[ i ].price = price;
         return p1;
     }
+    static inline public function withChanges( p0: Product
+                                             , productTransformation: Product->Product
+                                             , variantTransformation: (Variant,Variant)->Variant ){
+        var p1 = ( p0: ProductCloner );
+        var l  = p1.variants.length;
+        var p2 = ( productTransformation != null )? productTransformation( p1 ): p1;
+        if( variantTransformation != null ) for( i in 0...l ) p2.variants[ i ] = variantTransformation( p0.variants[ i ], p2.variants[ i ] );
+        return p2;
+    }
     @:from
     static inline public function fromProduct( p: Product ) return new ProductCloner( p );
     inline public function toJsonString() return haxe.Json.stringify( this, null, '   ' ); // pretty print for reading easier
