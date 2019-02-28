@@ -9,7 +9,7 @@ class Shop {
     public
     function constructItemPathWithHash( path_: String, resource_: String, ?extra_: String ): String {
         var path        = path_;
-        var resource    = resource_ '#' + resource_;
+        var resource    = '#' + resource_;
         var out: String = 'https://$apiKey:$password@$name.myshopify.com/admin/$path/$resource.json';
         if( extra_ != null ) out = out + extra_;
         return out;
