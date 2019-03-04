@@ -4,6 +4,7 @@ import hxTShopify.t.Image;
 import hxTShopify.t.Option;
 import hxTShopify.t.Variant;
 import hxTShopify.t.Product;
+import hxbit.Serializable;
 typedef Product = {
         @:optional var id:                   Int;
         var title:                           String;
@@ -74,4 +75,10 @@ abstract ProductCloner( Product ) to Product {
     @:from
     static inline public function fromProduct( p: Product ) return new ProductCloner( p );
     inline public function toJsonString() return haxe.Json.stringify( this, null, '   ' ); // pretty print for reading easier
+}
+public class ProductSerializer implements hxbit.Serializable {
+    @:s public var product : Product;
+    public function new( product_ ){
+        product = product_;
+    }
 }
