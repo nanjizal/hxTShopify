@@ -25,7 +25,7 @@ abstract VariantArray( Array<Variant> ) to Array<Variant> {
             var variant = this[ i ];
             if( variant.inventory_quantity < max )  variants[ variants.length ] = variant;
         }
-        return varants;
+        return variants;
     }
     public function stringQuanitiesAbove( min: Int ){
         var variant: Variant;
@@ -43,7 +43,7 @@ abstract VariantArray( Array<Variant> ) to Array<Variant> {
             var variant = this[ i ];
             if( variant.inventory_quantity > min )  variants[ variants.length ] = variant;
         }
-        return varants;
+        return variants;
     }
     public function stringQuanities(){
         var variant: Variant;
