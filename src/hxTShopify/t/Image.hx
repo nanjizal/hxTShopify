@@ -1,7 +1,8 @@
 package hxTShopify.t;
 import hxTShopify.t.*;
 typedef Image = {
-    @:optional var id: String;
+    //@:optional 
+    var id: String;
     @:optional var product_id: String;
     var position: Int;
     @:optional var created_at: StringDate;
