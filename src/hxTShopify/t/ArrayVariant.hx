@@ -47,7 +47,7 @@ abstract ArrayVariant( Array<Variant> ) to Array<Variant> {
     }
     public function stringQuanities(){
         var variant: Variant;
-        var strTemp: String = '';
+        var str: String = '';
         for( i in 0...this.length ){
             var variant = this[ i ];
             str += variant.title + '( ' + variant.inventory_quantity + ' ),\n ';
