@@ -7,7 +7,7 @@ abstract ArrayVariant( Array<Variant> ) to Array<Variant> {
         this = ( variants == null )? empty(): variants;
     }
     static inline function empty(){
-        return new ArrayVariant( new Array<Variant>() );
+        return new Array<Variant>();
     }
     public function stringQuanitiesBelow( max: Int ){
         var variant: Variant;
