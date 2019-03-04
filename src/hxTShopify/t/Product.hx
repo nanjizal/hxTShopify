@@ -27,7 +27,8 @@ typedef Product = {
 abstract ProductWrapper( Product ) to Product from Product {
     public inline function new( p: Product ) {
         this = p;
-        p.id = p.id + ''; // make sure string
+        var temp = p.id + ''; // make sure string
+        p.id = temp;
         var images = p.images;
         for( i in 0...images.length ) images[ i ] = ( images[ i ]: ImageWrapper );
         p.image = ( p.image: ImageWrapper );
