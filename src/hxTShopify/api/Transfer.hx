@@ -52,7 +52,7 @@ class Transfer{
                       , to_.getKeyPass() 
                       );
         });
-    }
+        }/*
     public static function productUpdate( from_:                 Shop
                                         , to_:                   Shop
                                         , searchString:          String
@@ -76,7 +76,7 @@ class Transfer{
             var p                      = ps[ 0 ];
             loaded( p.title, searchString );
             
-            /*
+            *//*
             var https = new Https<ProductHolder>();
             https.onLoad = function( ps_: ProductHolder ){
                 var p_: Product = ps_.product;
@@ -90,8 +90,8 @@ class Transfer{
                       , payload
                       , to_.getKeyPass() 
                       );
-            */
-        });
+            *//*
+        });*/
     }
     
 }
