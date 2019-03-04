@@ -15,6 +15,6 @@ class ProductSerializer implements hxbit.Serializable {
     public static function bytes2Product( bytesIn: haxe.io.Bytes ): Product {
         var u = new hxbit.Serializer();
         var productSerializerOut = u.unserialize( bytesIn, ProductSerializer );
-        return p.product;
+        return productSerializerOut.product;
     }
 }
