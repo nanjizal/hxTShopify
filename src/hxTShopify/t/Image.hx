@@ -17,7 +17,8 @@ typedef Image = {
 // macro solution might be nicer but not as easy to be flexible 
 abstract ImageCloner( Image ) to Image {
     public inline function new( i: Image ){
-        this = { position:          i.position
+        this = { id: i.id 
+            ,    position:          i.position
                , alt:               i.alt
                , width:             i.width
                , height:            i.height
