@@ -12,7 +12,7 @@ typedef Image = {
     var src: String;
     @:optional var admin_graphjl_api_id: String;
 }
-abstract ImageWrapper( Image ) to Image from Image {
+abstract ImageWrapper( Image ) from Image {
     public inline function new( img: Image ) {
         this = img;
         this.id = this.id + '';

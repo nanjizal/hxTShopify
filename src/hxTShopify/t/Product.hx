@@ -25,7 +25,7 @@ typedef Product = {
         var image:                           Image;
 }
 @:forward
-abstract ProductWrapper( Product ) to Product from Product {
+abstract ProductWrapper( Product ) from Product {
     public inline function new( p: Product ) {
         this = p;
         this.id = p.id + ''; // make sure string
