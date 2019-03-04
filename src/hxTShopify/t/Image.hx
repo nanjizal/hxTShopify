@@ -12,7 +12,13 @@ typedef Image = {
     var src: String;
     @:optional var admin_graphjl_api_id: String;
 }
-
+abstract ImageWrapper( Image ) to Image from Image {
+    public inline function new( img: Image ) {
+        this = img;
+        this.id = this.id + '';
+        this.product_id = this.product_id + '';
+    }
+}
 // macro solution might be nicer but not as easy to be flexible 
 abstract ImageCloner( Image ) to Image {
     public inline function new( i: Image ){

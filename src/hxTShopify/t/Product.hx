@@ -25,7 +25,13 @@ typedef Product = {
         var image:                           Image;
 }
 abstract ProductWrapper( Product ) to Product from Product {
-    public inline function new( p: Product ) this = p;
+    public inline function new( p: Product ) {
+        this = p;
+        p.id = p.id + ''; // make sure string
+        var images = p.images;
+        for( i in 0...images.length ) images[ i ] = ( images[ i ]: ImageWrapper );
+        p.image = ( image: ImageWrapper );
+    }
     public inline function toJsonString() return haxe.Json.stringify( this, null, '   ' ); // pretty print for reading easier
     
 }
