@@ -24,13 +24,14 @@ typedef Product = {
         var images:                          Array<Image>;
         var image:                           Image;
 }
+@:forward
 abstract ProductWrapper( Product ) to Product from Product {
     public inline function new( p: Product ) {
         this = p;
-        p.id = p.id + ''; // make sure string
-        var images = p.images;
-        for( i in 0...images.length ) images[ i ] = ( images[ i ]: ImageWrapper );
-        p.image = ( p.image: ImageWrapper );
+        this.id = p.id + ''; // make sure string
+        var images = this.images;
+        for( i in 0...images.length ) this.images[ i ] = ( images[ i ]: ImageWrapper );
+        this.image = ( this.image: ImageWrapper );
     }
     public inline function toJsonString() return haxe.Json.stringify( this, null, '   ' ); // pretty print for reading easier
     
