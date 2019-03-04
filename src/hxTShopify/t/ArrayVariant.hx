@@ -3,7 +3,7 @@ import hxTShopify.t.Variant;
 // used as a helper for working with Variants
 @:forward
 abstract ArrayVariant( Array<Variant> ) to Array<Variant> {
-    public inline function new( variants: Null<Array<Variant>> ){
+    public inline function new( ?variants: Null<Array<Variant>> ){
         this = ( variants == null )? empty(): variants;
     }
     static inline function empty(){
