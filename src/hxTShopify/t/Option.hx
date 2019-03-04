@@ -1,12 +1,18 @@
 package hxTShopify.t;
 typedef Option = {
-    @:optional var id: Int;
-    @:optional var product_id: Int;
+    @:optional var id: String;
+    @:optional var product_id: String;
     var name:      String;
     var position:  String;
     var values:    Array<String>;
 }
-
+abstract OptionWrapper( Option ) to Option {
+    public inline function new( op: Option ) {
+        this = op;
+        this.id = this.id + '';
+        this.product_id = this.product_id + '';
+    }
+}
 // macro solution might be nicer but not as easy to be flexible 
 abstract OptionCloner( Option ) to Option {
     public inline function new( o: Option ){

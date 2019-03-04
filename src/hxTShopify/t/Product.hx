@@ -29,8 +29,9 @@ abstract ProductWrapper( Product ) to Product {
     public inline function new( p: Product ) {
         this = p;
         this.id = p.id + ''; // make sure string
-        var images = this.images;
-        for( i in 0...images.length ) this.images[ i ] = new ImageWrapper( images[ i ] );
+        for( i in 0...images.length   ) this.images[ i ]   = new ImageWrapper( this.images[ i ] );
+        for( i in 0...options.length  ) this.options[ i ]  = new OptionWrapper( this.options[ i ] );
+        for( i in 0...variants.length ) this.variants[ i ] = new VariantWrapper( this.variants[ i ] );
         this.image = new ImageWrapper( this.image );
     }
     public inline function toJsonString() return haxe.Json.stringify( this, null, '   ' ); // pretty print for reading easier

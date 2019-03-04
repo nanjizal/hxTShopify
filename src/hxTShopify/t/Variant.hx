@@ -7,7 +7,7 @@ package hxTShopify.t;
 
 typedef Variant = {
     @:optional var id:          String;
-    @:optional var product_id:  Int;
+    @:optional var product_id:  String;
     var title:                  String;
     @:optional var price:       Null<Float>;
     var sku:                    String;
@@ -32,6 +32,14 @@ typedef Variant = {
     @:optional var old_inventory_quantity: Int;
     var requires_shipping:      Bool;
     @:optional var admin_graphql_api_id:   String;
+}
+
+abstract VariantWrapper( Variant ) to Variant {
+    public inline function new( v: Variant ) {
+        this = v;
+        this.id = this.id + '';
+        this.product_id = this.product_id + '';
+    }
 }
 
 // macro solution might be nicer but not as easy to be flexible 
