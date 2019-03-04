@@ -41,7 +41,7 @@ abstract VariantArray( Array<Variant> ) to Array<Variant> {
         var variants = new VariantArray();
         for( i in 0...this.length ){
             var variant = this[ i ];
-            if( variant.inventory_quantity > min )  variants[ variants.length ] = variant;;
+            if( variant.inventory_quantity > min )  variants[ variants.length ] = variant;
         }
         return varants;
     }
