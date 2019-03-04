@@ -3,7 +3,7 @@ package hxTShopify.t;
  *  https://help.shopify.com/en/api/reference/customers/customer
  **/
 typedef Customer = {
-    var id:                   Int;
+    var id:                   String;
     var email:                String;
     var accepts_marketing:    Bool;
     var created_at:           StringDate;

@@ -6,7 +6,7 @@ package hxTShopify.t;
  **/
 
 typedef Variant = {
-    @:optional var id:          Int;
+    @:optional var id:          String;
     @:optional var product_id:  Int;
     var title:                  String;
     @:optional var price:       Null<Float>;

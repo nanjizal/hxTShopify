@@ -5,7 +5,8 @@ import hxTShopify.t.Option;
 import hxTShopify.t.Variant;
 import hxTShopify.t.Product;
 typedef Product = {
-        @:optional var id:                   Int;
+    // change id to string as it's too large!
+        @:optional var id:                   String;
         var title:                           String;
         var body_html:                       String;  // new haxe xml?
         var vendor:                          String;

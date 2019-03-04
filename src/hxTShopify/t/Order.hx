@@ -1,6 +1,6 @@
 package hxTShopify.t;
 typedef Order = {
-    var id:                         Int;
+    var id:                         String;
     var email:                      String;
     var closed_at :                 Null<String>;
     var created_at:                 StringDate;
