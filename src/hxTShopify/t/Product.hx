@@ -30,7 +30,7 @@ abstract ProductWrapper( Product ) to Product from Product {
         p.id = p.id + ''; // make sure string
         var images = p.images;
         for( i in 0...images.length ) images[ i ] = ( images[ i ]: ImageWrapper );
-        p.image = ( image: ImageWrapper );
+        p.image = ( p.image: ImageWrapper );
     }
     public inline function toJsonString() return haxe.Json.stringify( this, null, '   ' ); // pretty print for reading easier
     
