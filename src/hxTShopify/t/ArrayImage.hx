@@ -13,7 +13,7 @@ abstract ArrayImage( Array<Image> ) to Array<Image> {
         var image: Image;
         var arr = new Array<String>();
         for( j in 0...this.length ){
-            var image = this[ j ];
+            image = this[ j ];
             arr[ j ] = Std.string( image.width ) + 'x' + Std.string( image.height );
         }
         return arr;
@@ -22,7 +22,7 @@ abstract ArrayImage( Array<Image> ) to Array<Image> {
         var image: Image;
         var arr = new Array<String>();
         for( j in 0...this.length ){
-            var image = this[ j ];
+            image = this[ j ];
             arr[ j ] = image.src;
         }
         return arr;
