@@ -3,8 +3,8 @@ import hxTShopify.t.Image;
 // used as a helper for working with Images
 @:forward
 abstract ArrayImage( Array<Image> ) to Array<Image> {
-    public inline function new( ?options: Null<Array<Image>> ){
-        this = ( image == null )? empty(): image;
+    public inline function new( ?images: Null<Array<Image>> ){
+        this = ( images == null )? empty(): images;
     }
     static inline function empty(){
         return new Array<Image>();
