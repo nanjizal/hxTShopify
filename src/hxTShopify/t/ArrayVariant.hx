@@ -54,4 +54,23 @@ abstract ArrayVariant( Array<Variant> ) to Array<Variant> {
         }
         return str;
     }
+    public inline function emptyVariants(){
+        var variant: Variant;
+        var variants = new ArrayVariant();
+        for( i in 0...this.length ){
+            var variant = this[ i ];
+            if( variant.inventory_quantity < 1 )  variants[ variants.length ] = variant;
+        }
+        return variants;
+    }
+    public inline function emptyVariantIds(){
+        var variant: Variant;
+        var variants = new Array<String>();
+        for( i in 0...this.length ){
+            var variant = this[ i ];
+            if( variant.inventory_quantity < 1 )  variants[ variants.length ] = variant.id;
+        }
+        return variants;
+    }
+    
 }
