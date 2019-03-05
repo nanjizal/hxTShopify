@@ -19,7 +19,7 @@ abstract ArrayOption( Array<Option> ) to Array<Option> {
             for( k in 0...op.length ){ 
                 var notNumber: Bool = Math.isNaN( Std.parseFloat( op[ k ] ) );
                 if( notNumber ){
-                    anOption = op[k].toLowerCase();
+                    var anOption = op[k].toLowerCase();
                     if( arr.indexOf( anOption ) == -1 ){
                         arr[ arr.length ] = anOption;
                     }
@@ -42,7 +42,7 @@ abstract ArrayOption( Array<Option> ) to Array<Option> {
                 no = Std.parseFloat( op[ k ] );
                 var notNumber: Bool = Math.isNaN( no );
                 if( notNumber ){
-                    anOption = op[k].toLowerCase();
+                    var anOption = op[k].toLowerCase();
                     if( arr.indexOf( anOption ) == -1 ){
                         arr[ arr.length ] = no;
                     }
