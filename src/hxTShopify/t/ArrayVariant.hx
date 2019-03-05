@@ -9,7 +9,7 @@ abstract ArrayVariant( Array<Variant> ) to Array<Variant> {
     static inline function empty(){
         return new Array<Variant>();
     }
-    public function stringQuanitiesBelow( max: Int ){
+    public inline function stringQuanitiesBelow( max: Int ){
         var variant: Variant;
         var str: String = '';
         for( i in 0...this.length ){
@@ -18,7 +18,7 @@ abstract ArrayVariant( Array<Variant> ) to Array<Variant> {
         }
         return str;
     }
-    public function quanitiesBelow( max: Int ){
+    public inline function quanitiesBelow( max: Int ){
         var variant: Variant;
         var variants = new ArrayVariant();
         for( i in 0...this.length ){
@@ -27,7 +27,7 @@ abstract ArrayVariant( Array<Variant> ) to Array<Variant> {
         }
         return variants;
     }
-    public function stringQuanitiesAbove( min: Int ){
+    public inline function stringQuanitiesAbove( min: Int ){
         var variant: Variant;
         var str: String = '';
         for( i in 0...this.length ){
@@ -36,7 +36,7 @@ abstract ArrayVariant( Array<Variant> ) to Array<Variant> {
         }
         return str;
     }
-    public function quanitiesAbove( min: Int ){
+    public inline function quanitiesAbove( min: Int ){
         var variant: Variant;
         var variants = new ArrayVariant();
         for( i in 0...this.length ){
@@ -45,7 +45,7 @@ abstract ArrayVariant( Array<Variant> ) to Array<Variant> {
         }
         return variants;
     }
-    public function stringQuanities(){
+    public inline function stringQuanities(){
         var variant: Variant;
         var str: String = '';
         for( i in 0...this.length ){

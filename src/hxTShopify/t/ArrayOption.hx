@@ -10,7 +10,7 @@ abstract ArrayOption( Array<Option> ) to Array<Option> {
         return new Array<Option>();
     }
     // Color?
-    public function notNumbers( ){
+    public inline function notNumbers( ){
         var option: Option;
         var arr = new Array<String>();
         for( j in 0...this.length ){
@@ -31,7 +31,7 @@ abstract ArrayOption( Array<Option> ) to Array<Option> {
         return arr;
     }
     // Size?
-    public function isNumbers( ){
+    public inline function isNumbers( ){
         var option: Option;
         var arr = new Array<Float>();
         var no: Float;

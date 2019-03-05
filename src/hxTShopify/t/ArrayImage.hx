@@ -9,7 +9,7 @@ abstract ArrayImage( Array<Image> ) to Array<Image> {
     static inline function empty(){
         return new Array<Image>();
     }
-    public function stringDimensions(){
+    public inline function stringDimensions(){
         var image: Image;
         var arr = new Array<String>();
         for( j in 0...this.length ){
@@ -18,7 +18,7 @@ abstract ArrayImage( Array<Image> ) to Array<Image> {
         }
         return arr;
     }
-    public function imageLocations(){
+    public inline function imageLocations(){
         var image: Image;
         var arr = new Array<String>();
         for( j in 0...this.length ){
