@@ -42,8 +42,7 @@ abstract ArrayOption( Array<Option> ) to Array<Option> {
                 no = Std.parseFloat( op[ k ] );
                 var notNumber: Bool = Math.isNaN( no );
                 if( notNumber ){
-                    var anOption = op[k].toLowerCase();
-                    if( arr.indexOf( anOption ) == -1 ){
+                    if( arr.indexOf( no ) == -1 ){
                         arr[ arr.length ] = no;
                     }
                 } else {
