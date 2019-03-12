@@ -20,7 +20,7 @@ class TestProducts{
         testVariants = new TestVariants();
     }
     public function hat(){
-        var images = Array<Image>();
+        var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Hat' );
         var product = createTestProduct( 'hat', 
                             [ { size: size6,  color: Black,  quantity: 3 }
@@ -33,7 +33,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function tie(){
-        var images = Array<Image>();
+        var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Tie' );
         var product = createTestProduct( 'tie', 
                             [ { size: size24, color: Green,  quantity: 33 }
@@ -46,7 +46,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function jumper(){
-        var images = Array<Image>();
+        var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Jumper' );
         var product = createTestProduct( 'jumper', 
                             [ { size: size10, color: Red,  quantity: 33 }
@@ -59,7 +59,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function pants(){
-        var images = Array<Image>();
+        var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Pants' );
         var product = createTestProduct( 'pants', 
                             [ { size: size10, color: Red,  quantity: 33 }
@@ -72,7 +72,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function sock(){
-        var images = Array<Image>();
+        var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Sock' );
         var product = createTestProduct( 'sock', 
                             [ { size: size10, color: Red,  quantity: 33 }
@@ -85,7 +85,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function skirt(){
-        var images = Array<Image>();
+        var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Skirt' );
         var product = createTestProduct( 'skirt', 
                             [ { size: size10, color: Red,  quantity: 33 }
@@ -99,7 +99,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function trousers(){
-        var images = Array<Image>();
+        var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Trousers' );
         var product = createTestProduct( 'trousers', 
                             [ { size: size10, color: Red,  quantity: 33 }
