@@ -27,6 +27,7 @@ class TestProducts{
     public function hat(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Hat' );
+        images.push( TestImages.getImages( images.length, 'greenViolet','Hat') );
         var product = createTestProduct( 'hat', 
                             [ { size: size6,  color: Black,  quantity: 3 }
                             , { size: size8,  color: Yellow, quantity: 13 }
@@ -40,6 +41,7 @@ class TestProducts{
     public function tie(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Tie' );
+        images.push( TestImages.getImages( images.length, 'giraffe','Hat') );
         var product = createTestProduct( 'tie', 
                             [ { size: size24, color: Green,  quantity: 33 }
                             , { size: size14, color: Yellow, quantity: 24 }
@@ -53,6 +55,7 @@ class TestProducts{
     public function jumper(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Jumper' );
+        images.push( TestImages.getImages( images.length, 'lightPlumAndGreen','Jumper') );
         var product = createTestProduct( 'jumper', 
                             [ { size: size10, color: Red,  quantity: 33 }
                             , { size: size12, color: White, quantity: 24 }
@@ -66,6 +69,7 @@ class TestProducts{
     public function pants(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Pants' );
+        images.push( TestImages.getImages( images.length, 'oliveOrange','Pants') );
         var product = createTestProduct( 'pants', 
                             [ { size: size10, color: Red,  quantity: 33 }
                             , { size: size12, color: White, quantity: 24 }
@@ -79,6 +83,7 @@ class TestProducts{
     public function sock(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Sock' );
+        images.push( TestImages.getImages( images.length, 'babyYellowBlue','Pants') );
         var product = createTestProduct( 'sock', 
                             [ { size: size10, color: Red,  quantity: 33 }
                             , { size: size12, color: White, quantity: 24 }
@@ -92,6 +97,7 @@ class TestProducts{
     public function skirt(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Skirt' );
+        images.push( TestImages.getImages( images.length, 'pinkAndMauve','Pants') );
         var product = createTestProduct( 'skirt', 
                             [ { size: size10, color: Red,  quantity: 33 }
                             , { size: size12, color: White, quantity: 24 }
@@ -106,6 +112,7 @@ class TestProducts{
     public function trousers(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Trousers' );
+        images.push( TestImages.getImages( images.length, 'denim','Pants') );
         var product = createTestProduct( 'trousers', 
                             [ { size: size10, color: Red,  quantity: 33 }
                             , { size: size12, color: White, quantity: 24 }
