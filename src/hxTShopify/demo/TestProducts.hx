@@ -83,3 +83,4 @@ class TestProducts{
                         , image:            images[ 0 ] }
         return product;
     }
+}
