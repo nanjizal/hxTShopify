@@ -11,11 +11,11 @@ typedef Variant = {
     var title:                  String;
     @:optional var price:       Null<Float>;
     var sku:                    String;
-    var position:               Int;
-    var inventory_policy:       String;
+    @:optional var position:               Int;
+    @:optional var inventory_policy:       String;
     @:optional var compare_at_price:       Float;
-    var fulfillment_service:    String;
-    var inventory_management:   String;
+    @:optional var fulfillment_service:    String;
+    @:optional var inventory_management:   Null<String>;
     var option1:                Null<String>;
     var option2:                Null<String>;
     var option3:                Null<String>;
@@ -28,7 +28,7 @@ typedef Variant = {
     var weight:                 Float;
     var weight_unit:            String;
     @:optional var inventory_item_id:      Int;
-    var inventory_quantity:     Int;
+    var inventory_quantity:     Float;
     @:optional var old_inventory_quantity: Int;
     var requires_shipping:      Bool;
     @:optional var admin_graphql_api_id:   String;

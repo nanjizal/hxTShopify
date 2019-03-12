@@ -1,8 +1,8 @@
 package hxTShopify.t;
 // order
 typedef DefaultAddress = {
-    var id:             Int; 
-    var customer_id:    Int;
+    var id:             String; 
+    var customer_id:    String;
     var first_name:     String;
     var last_name:      String;
     var company:        String;

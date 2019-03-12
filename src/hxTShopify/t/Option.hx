@@ -3,7 +3,7 @@ typedef Option = {
     @:optional var id: String;
     @:optional var product_id: String;
     var name:      String;
-    var position:  String;
+    @:optional var position:  String;
     var values:    Array<String>;
 }
 abstract OptionWrapper( Option ) to Option {

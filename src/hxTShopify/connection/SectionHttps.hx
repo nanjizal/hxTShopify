@@ -9,6 +9,7 @@ class SectionHttps<T,THolder> extends Https<THolder> {
     var pageUrl:            Int -> String;
     var getSection:         THolder->Array<T>;
     var pageSize:           Int;
+    public var onPage:      Int -> Void;
     var countHttps          = new Https<Count>();
     var sectionHttps        = new Https<THolder>();
     var pass:               String;
@@ -55,6 +56,7 @@ class SectionHttps<T,THolder> extends Https<THolder> {
     function nextPage( sectionsHolder: THolder ){
         addSections( sectionsHolder );
         if( onPercent != null ) onPercent( Std.int( 100 * currPage / totalPages ) );
+        if( onPage != null )    onPage( currPage );
         if( totalPages > currPage ) {
             currPage++;
             getSectionPage( currPage );
@@ -73,3 +75,4 @@ class SectionHttps<T,THolder> extends Https<THolder> {
         if( sectionsHolder != null ) sections = sections.concat( getSection( sectionsHolder ) );
     }
 }
+

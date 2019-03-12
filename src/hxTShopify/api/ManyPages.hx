@@ -57,6 +57,7 @@ class ManyPages {
             , productPageSize );
         section.onItemTotal = ( c: Int ) -> log( 'product total' + c );
         section.onPageTotal = ( t: Int ) -> log( 'product page total' + t );
+        section.onPage      = ( no: Int ) -> log( 'page no ' + no );
         section.onPercent   = productsLoadProgress;
         section.onFinish    = productsLoaded;
         section.getSections();
