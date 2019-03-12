@@ -22,13 +22,13 @@ class Delete {
                                         ){
         Search.log = log;
         Search.searchProducts( shop, searchString, 
-            function( ps: Array<Product> ){
+            function( ps_: Array<Product> ){
                 // exit if no product or multiple product found
-                if( ps.length != 1 ){
-                    if( ps.length == 0 || ps.length == null ){
+                if( ps_.length != 1 ){
+                    if( ps_.length == 0 || ps_.length == null ){
                         log( 'error: no product found for: $searchString' );
                     } else {
-                        var l = ps.length;
+                        var l = ps_.length;
                         log( 'error: lots of products found for: $searchString + ( $l )' );
                     }
                     return;
