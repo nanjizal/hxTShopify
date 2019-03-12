@@ -31,6 +31,7 @@ class TestProducts{
     }
     function countDeleted(){
         deletedCount++;
+        log( 'deleteCount ' + Std.string( deleteCount ));
         if( deletedCount == 7 ){
             onDelete();
         }
