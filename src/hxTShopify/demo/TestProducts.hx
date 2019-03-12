@@ -174,7 +174,7 @@ class TestProducts{
         var https = new Https<ProductHolder>();
         https.onLoad = function( ps: ProductHolder ){
             var p: Product = ps.product;
-            if( log != null ) log( 'loaded ' + Std.string( p ) );
+            if( log != null ) log( 'loaded ' + Std.string( p.title ) );
             loadCount++;
             if( onLoad != null ) onLoad( product.title );
         }
