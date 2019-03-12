@@ -6,6 +6,8 @@ import hxTShopify.demo.*;
 import hxTShopify.demo.TestOptions;
 import hxTShopify.store.Shop;
 import hxTShopify.t.Image;
+import hxTShopify.connection.*;
+import hxTShopify.connection.Https;
 class TestProducts{
     public static var log: String->Void;
     var testVariants: TestVariants;
@@ -74,7 +76,7 @@ class TestProducts{
         var product: Product =   
                         { title:            title
                         , body_html:        title
-                        , vendor:           vendor
+                        , vendor:           testVariant.vendor
                         , product_type:     testVariant.productType  
                         , handle:           title
                         , tags:             tags
