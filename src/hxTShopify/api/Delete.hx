@@ -28,9 +28,11 @@ class Delete {
                 if( ps_.length != 1 ){
                     if( ps_.length == 0 || ps_.length == null ){
                         log( 'error: no product found for: $searchString' );
+                        if( finished != null ) finished();
                     } else {
                         var l = ps_.length;
                         log( 'error: lots of products found for: $searchString + ( $l )' );
+                        if( finished != null ) finished(); 
                     }
                     return;
                 }
