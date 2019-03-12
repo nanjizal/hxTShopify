@@ -35,7 +35,7 @@ class Delete {
                     return;
                 }
                 var p_ = ps_[0];
-                //var https = new Https<ProductHolder>();
+                var https = new Https<ProductHolder>();
                 //https.onLoad = function( ps_: ProductHolder ){
                     //var p_: Product = ps_.product;
                     var id          = Std.string( p_.id );
