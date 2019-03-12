@@ -10,11 +10,11 @@ import hxTShopify.connection.*;
 import hxTShopify.connection.Https;
 class TestProducts{
     public static var log: String->Void;
-    var testVariants: TestVariants;
+    var testVariant: TestVariants;
     var shop: Shop;
     public function new( shop_: Shop ){
         shop = shop_;
-        var testVariants = new TestVariants();
+        testVariant = new TestVariants();
     }
     public function hat(){
         var images  = TestImages.create();
