@@ -3,6 +3,7 @@ import hxTShopify.store.Shop;
 import hxTShopify.api.Search;
 import hxTShopify.t.Product;
 import hxTShopify.api.Calls;
+import hxTShopify.api.Https;
 import hxTShopify.t.*;
 import hxTShopify.connection.*;
 // May need more testing
