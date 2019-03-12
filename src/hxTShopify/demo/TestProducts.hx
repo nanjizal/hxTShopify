@@ -10,6 +10,8 @@ import hxTShopify.t.*;
 import hxTShopify.connection.*;
 import hxTShopify.connection.Https;
 import hxTShopify.api.Calls;
+import hxTShopify.api.Delete;
+import hxTShopify.api.Transfer;
 class TestProducts{
     public static var log: String->Void;
     var testVariants: TestVariants;
@@ -23,6 +25,12 @@ class TestProducts{
     public function new( shop_: Shop ){
         shop = shop_;
         testVariants = new TestVariants();
+    }
+    public function deleteHat(){
+        Delete.productDelet( shop, 'hat', log );
+    }
+    public function moveHat( targetShop: Shop ){
+        moveProduct( targetShop, 'hat' );
     }
     public function hat(){
         var images = new Array<Image>();
@@ -38,6 +46,12 @@ class TestProducts{
                             , images );
         createProduct( shop, product );
     }
+    public function deleteTie(){
+        Delete.productDelete( shop, 'tie', log );
+    }
+    public function moveTie( targetShop: Shop ){
+        moveProduct( targetShop, 'tie' );
+    }
     public function tie(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Tie' );
@@ -51,6 +65,12 @@ class TestProducts{
                             , [ 'silk' ]
                             , images );
         createProduct( shop, product );
+    }
+    public function deleteJumper(){
+        Delete.productDelete( shop, 'jumper', log );
+    }
+    public function moveJumper( targetShop: Shop ){
+        moveProduct( targetShop, 'jumper' );
     }
     public function jumper(){
         var images = new Array<Image>();
@@ -66,6 +86,12 @@ class TestProducts{
                             , images );
         createProduct( shop, product );
     }
+    public function deletePants(){
+        Delete.productDelete( shop, 'pants', log );
+    }
+    public function movePants( targetShop: Shop ){
+        moveProduct( targetShop, 'pants' );
+    }
     public function pants(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Pants' );
@@ -79,6 +105,12 @@ class TestProducts{
                             , [ 'underwear','cotton']
                             , images );
         createProduct( shop, product );
+    }
+    public function deleteSock(){
+        Delete.productDelete( shop, 'sock', log );
+    }
+    public function moveSock( targetShop: Shop ){
+        moveProduct( targetShop, 'sock' );
     }
     public function sock(){
         var images = new Array<Image>();
@@ -94,6 +126,12 @@ class TestProducts{
                             , images );
         createProduct( shop, product );
     }
+    public function deleteSkirt(){
+        Delete.productDelete( shop, 'skirt', log );
+    }
+    public function moveSkirt( targetShop: Shop ){
+        moveProduct( targetShop, 'skirt' );
+    }
     public function skirt(){
         var images = new Array<Image>();
         for( i in 0...imageColors.length ) images[ i ] = TestImages.getImage( i, imageColors[ i ], 'Skirt' );
@@ -108,6 +146,12 @@ class TestProducts{
                             , [ 'dresses','bottoms']
                             , images );
         createProduct( shop, product );
+    }
+    public function deleteTrousers(){
+        Delete.productDelete( shop, 'trousers', log );
+    }
+    public function moveTrousers( targetShop: Shop ){
+        moveProduct( targetShop, 'trousers' );
     }
     public function trousers(){
         var images = new Array<Image>();
@@ -156,4 +200,18 @@ class TestProducts{
                         , image:            images[ 0 ] }
         return product;
     }
+    // simulates going from wholesale to retail shop.
+    public function moveProduct( targetShop: Shop, searchString: String ){
+        Transfer.productCreate( shop, targetShop, 'hat'
+                              , ( p_: Product ) -> return p_
+                              , ( v0: Variant, v1: Variant ) -> {
+                                        var price = v0.price;
+                                        v1.price                = Math.round( price*1.3 );
+                                        v1.compare_at_price     = price*(2*1.3);
+                                        return v1;
+                                    }
+                              , ( p_: Product, searchString: String ) -> log( 'created' + searchString )
+                              , log );
+    }
+    
 }
