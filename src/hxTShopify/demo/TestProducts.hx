@@ -16,6 +16,7 @@ class TestProducts{
     public static var log: String->Void;
     var testVariants: TestVariants;
     public var onLoad: String->Void;
+    public var onDelete: Void->Void;
     var shop: Shop;
     var imageColors = [ 'violet', 'black'
                       , 'indigo',    'blue'
@@ -26,9 +27,17 @@ class TestProducts{
     public function new( shop_: Shop ){
         shop = shop_;
         testVariants = new TestVariants();
+        Delete.finished = countDeleted;
     }
+    function countDeleted(){
+        deleteCount++;
+        if( deleteCount == 7 ){
+            onDelete();
+        }
+    }
+    public var deletedCount = 0;
     public function deleteHat(){
-        Delete.productDelete( shop, '?title=$hat', log );
+        Delete.productDelete( shop, '?title=hat', log );
     }
     public function moveHat( targetShop: Shop ){
         moveProduct( targetShop, 'hat' );
@@ -48,7 +57,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function deleteTie(){
-        Delete.productDelete( shop, '?title=$tie', log );
+        Delete.productDelete( shop, '?title=tie', log );
     }
     public function moveTie( targetShop: Shop ){
         moveProduct( targetShop, 'tie' );
@@ -68,7 +77,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function deleteJumper(){
-        Delete.productDelete( shop, '?title=$jumper', log );
+        Delete.productDelete( shop, '?title=jumper', log );
     }
     public function moveJumper( targetShop: Shop ){
         moveProduct( targetShop, 'jumper' );
@@ -88,7 +97,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function deletePants(){
-        Delete.productDelete( shop, '?title=$pants', log );
+        Delete.productDelete( shop, '?title=pants', log );
     }
     public function movePants( targetShop: Shop ){
         moveProduct( targetShop, 'pants' );
@@ -108,7 +117,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function deleteSock(){
-        Delete.productDelete( shop, '?title=$sock', log );
+        Delete.productDelete( shop, '?title=sock', log );
     }
     public function moveSock( targetShop: Shop ){
         moveProduct( targetShop, 'sock' );
@@ -128,7 +137,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function deleteSkirt(){
-        Delete.productDelete( shop, '?title=$skirt', log );
+        Delete.productDelete( shop, '?title=skirt', log );
     }
     public function moveSkirt( targetShop: Shop ){
         moveProduct( targetShop, 'skirt' );
@@ -149,7 +158,7 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function deleteTrousers(){
-        Delete.productDelete( shop, '?title=$trousers', log );
+        Delete.productDelete( shop, '?title=trousers', log );
     }
     public function moveTrousers( targetShop: Shop ){
         moveProduct( targetShop, 'trousers' );

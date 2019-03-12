@@ -7,6 +7,7 @@ import hxTShopify.t.*;
 import hxTShopify.connection.*;
 // May need more testing
 class Delete {
+    public static function finished: Void->Void;
     public static function productsRemove( shop:          Shop
                                          , productNames:  Array<String>
                                          , log:           String->Void ){
@@ -38,8 +39,14 @@ class Delete {
                     var id          = Std.string( p_.id );
                     var title       = p_.title;
                     https.delete( shop.constructItemPath( PRODUCT, id ), id, shop.getKeyPass() );
-                    https.onError =  ( val: String ) -> if( log != null ) log( 'error deleting $title, $id, $val' );
-                    https.onDelete = ( val: String ) -> if( log != null ) log( 'Deleted $title, $id, $val' );
+                    https.onError =  ( val: String ) -> { 
+                        if( finished != null ) finished(); 
+                        if( log != null ) log( 'error deleting $title, $id, $val' );
+                    }
+                    https.onDelete = ( val: String ) -> { 
+                        if( finished != null ) finished(); 
+                        if( log != null ) log( 'Deleted $title, $id, $val' );
+                    }
                 }
             }
         );
