@@ -38,11 +38,11 @@ class TestProducts{
                             [ { size: size24, color: Green,  quantity: 33 }
                             , { size: size14, color: Yellow, quantity: 24 }
                             , { size: size16, color: Orange, quantity: 19 } ]
-                            , 16.00
+                            , 14.00
                             , 2.2
                             , [ 'silk' ]
                             , [ image ] );
-        createProduct( shops[0], product );
+        createProduct( shop, product );
     }
     public function jumper(){
         var images  = TestImages.create();
