@@ -111,7 +111,7 @@ class TestImages {
         var pic = '';
         var l = pics.length;
         for( i in 0...l ){
-            pic = col + pics[ i ];
+            pic = pics[ i ];
             images[ i ] = getImage( i, pic );
         }
         return images;
