@@ -14,7 +14,12 @@ class TestProducts{
     public static var log: String->Void;
     var testVariants: TestVariants;
     var shop: Shop;
-    var imageColors = [ 'black','violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red', 'black', 'lightGrey', 'mediumGrey','darkGrey','white' ];
+    var imageColors = [ 'black',     'violet'
+                      , 'indigo',    'blue'
+                      , 'green',     'yellow'
+                      , 'orange',    'red'
+                      , 'lightGrey', 'mediumGrey'
+                      , 'darkGrey',  'white' ];
     public function new( shop_: Shop ){
         shop = shop_;
         testVariants = new TestVariants();
