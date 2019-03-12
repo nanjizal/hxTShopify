@@ -5,6 +5,7 @@ import hxTShopify.t.Option;
 import hxTShopify.demo.*;
 import hxTShopify.demo.TestOptions;
 import hxTShopify.store.Shop;
+import hxTShopify.t.Image;
 class TestProducts{
     public static var log: String->Void;
     var testVariants: TestVariants;
