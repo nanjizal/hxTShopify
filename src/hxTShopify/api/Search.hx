@@ -12,7 +12,7 @@ class Search {
         }
         https.onLoad = function( ps: Products ){
             var p: Array<Product> = ps.products;
-            // if( log != null ) log('loaded ' + p.length );
+            if( log != null ) log('loaded ' + p.length );
             cb( p );
         }
         log( shop.constructPath( PRODUCT ) );

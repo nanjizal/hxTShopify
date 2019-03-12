@@ -33,6 +33,7 @@ class Delete {
                     }
                     return;
                 }
+                
                 var https = new Https<ProductHolder>();
                 https.onLoad = function( ps_: ProductHolder ){
                     var p_: Product = ps_.product;
