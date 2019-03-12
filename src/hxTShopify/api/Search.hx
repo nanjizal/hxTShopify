@@ -16,6 +16,7 @@ class Search {
             cb( p );
         }
         log( shop.constructPath( PRODUCT, searchString ) );
+        
         https.get( shop.constructPath( PRODUCT, searchString ), shop.getKeyPass() );
     }
     public static function searchCustomers( shop: Shop, searchString: String, cb: Array<Customer>->Void ){
