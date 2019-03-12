@@ -30,8 +30,8 @@ class TestProducts{
         Delete.finished = countDeleted;
     }
     function countDeleted(){
-        deleteCount++;
-        if( deleteCount == 7 ){
+        deletedCount++;
+        if( deletedCount == 7 ){
             onDelete();
         }
     }
