@@ -14,7 +14,7 @@ class TestProducts{
     public static var log: String->Void;
     var testVariants: TestVariants;
     var shop: Shop;
-    var imageColors = [ 'black',     'violet'
+    var imageColors = [ 'violet', 'black'
                       , 'indigo',    'blue'
                       , 'green',     'yellow'
                       , 'orange',    'red'
