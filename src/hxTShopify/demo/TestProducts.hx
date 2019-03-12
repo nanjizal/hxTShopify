@@ -3,6 +3,7 @@ import hxTShopify.t.Product;
 import hxTShopify.t.Variant ;
 import hxTShopify.t.Option;
 import hxTShopify.demo.*;
+import hxTShopify.demo.TestOptions;
 import hxTShopify.store.Shop;
 class TestProducts{
     public static var log: String->Void;
