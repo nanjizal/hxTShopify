@@ -1,6 +1,6 @@
 package hxTShopify.demo;
 import hxTShopify.t.Products;
-import hxTShopify.t.Variants;
+import hxTShopify.t.Variant;
 import hxTShopify.t.Options;
 import hxTShopify.demo.*;
 import hxTShopify.store.Shop;
