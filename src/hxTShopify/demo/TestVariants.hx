@@ -20,6 +20,7 @@ class TestVariants{
         for( i in 0...l ){
             variants.push( createVariant( i, optionLight[i], price, compareFactor ) );
         }
+        return variants;
     }
     public inline 
     function createVariant( i: Int, optionLight: OptionLight
