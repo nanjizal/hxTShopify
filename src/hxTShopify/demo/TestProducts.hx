@@ -9,6 +9,7 @@ import hxTShopify.t.Image;
 import hxTShopify.t.*;
 import hxTShopify.connection.*;
 import hxTShopify.connection.Https;
+import hxTShopify.api.Calls;
 class TestProducts{
     public static var log: String->Void;
     var testVariants: TestVariants;
