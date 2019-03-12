@@ -83,7 +83,7 @@ class TestProducts{
                         , handle:           title
                         , tags:             tags
                         , published_scope:  testVariants.publishScope
-                        , variants:         testVariants.create()
+                        , variants:         testVariants.create( optionLight, price, comparePrice )
                         , options:          TestOptions.create()
                         , images:           images
                         , image:            images[ 0 ] }
