@@ -7,7 +7,7 @@ import hxTShopify.t.*;
 import hxTShopify.connection.*;
 // May need more testing
 class Delete {
-    public static function finished: Void->Void;
+    public static var finished: Void->Void;
     public static function productsRemove( shop:          Shop
                                          , productNames:  Array<String>
                                          , log:           String->Void ){
