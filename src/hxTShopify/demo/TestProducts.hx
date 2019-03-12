@@ -19,7 +19,7 @@ class TestProducts{
         testVariants = new TestVariants();
     }
     public function hat(){
-        var images  = TestImages.create();
+        //var images  = TestImages.create();
         var image   = TestImages.getImage( 0, 'hat' );
         var product = createTestProduct( 'hat', 
                             [ { size: size6,  color: Black,  quantity: 3 }
@@ -32,7 +32,6 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function tie(){
-        var images  = TestImages.create();
         var image   = TestImages.getImage( 0, 'tie' );
         var product = createTestProduct( 'tie', 
                             [ { size: size24, color: Green,  quantity: 33 }
@@ -45,7 +44,6 @@ class TestProducts{
         createProduct( shop, product );
     }
     public function jumper(){
-        var images  = TestImages.create();
         var image   = TestImages.getImage( 0, 'jumper' );
         var product = createTestProduct( 'jumper', 
                             [ { size: size10, color: Red,  quantity: 33 }
@@ -54,6 +52,56 @@ class TestProducts{
                             , 16.00
                             , 2.2
                             , [ 'tops','wool']
+                            , [ image ] );
+        createProduct( shop, product );
+    }
+    public function pants(){
+        var image   = TestImages.getImage( 0, 'pants' );
+        var product = createTestProduct( 'pants', 
+                            [ { size: size10, color: Red,  quantity: 33 }
+                            , { size: size12, color: White, quantity: 24 }
+                            , { size: size22, color: Blue, quantity: 19 } ]
+                            , 16.00
+                            , 2.2
+                            , [ 'underwear','cotton']
+                            , [ image ] );
+        createProduct( shop, product );
+    }
+    public function sock(){
+        var image   = TestImages.getImage( 0, 'sock' );
+        var product = createTestProduct( 'sock', 
+                            [ { size: size10, color: Red,  quantity: 33 }
+                            , { size: size12, color: White, quantity: 24 }
+                            , { size: size22, color: Blue, quantity: 19 } ]
+                            , 16.00
+                            , 2.2
+                            , [ 'underwear','cotton']
+                            , [ image ] );
+        createProduct( shop, product );
+    }
+    public function skirt(){
+        var image   = TestImages.getImage( 0, 'skirt' );
+        var product = createTestProduct( 'skirt', 
+                            [ { size: size10, color: Red,  quantity: 33 }
+                            , { size: size12, color: White, quantity: 24 }
+                            , { size: size22, color: Blue, quantity: 19 } 
+                            , { size: size22, color: Green, quantity: 19 } ]
+                            , 16.00
+                            , 2.2
+                            , [ 'dresses','bottoms']
+                            , [ image ] );
+        createProduct( shop, product );
+    }
+    public function trousers(){
+        var image   = TestImages.getImage( 0, 'trousers' );
+        var product = createTestProduct( 'trousers', 
+                            [ { size: size10, color: Red,  quantity: 33 }
+                            , { size: size12, color: White, quantity: 24 }
+                            , { size: size22, color: Blue, quantity: 19 } 
+                            , { size: size22, color: Green, quantity: 19 } ]
+                            , 16.00
+                            , 2.2
+                            , [ 'bottoms']
                             , [ image ] );
         createProduct( shop, product );
     }
