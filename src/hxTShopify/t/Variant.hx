@@ -16,7 +16,7 @@ typedef Variant = {
     @:optional var compare_at_price:       Float;
     var fulfillment_service:    String;
     // do not try to create new product with this set, leaving out sets to shopify, null to do not track
-    @:optional var inventory_management:   String;
+    @:optional var inventory_management:   Null<String>;
     var option1:                Null<String>;
     var option2:                Null<String>;
     var option3:                Null<String>;
