@@ -39,6 +39,7 @@ class Delete {
                     var p_: Product = ps_.product;
                     var id          = Std.string( p_.id );
                     var title       = p_.title;
+                    if( log != null ) log( 'deleting ' + shop.constructItemPath( PRODUCT, id ) );
                     https.delete( shop.constructItemPath( PRODUCT, id ), id, shop.getKeyPass() );
                     https.onError =  ( val: String ) -> { 
                         if( finished != null ) finished(); 
