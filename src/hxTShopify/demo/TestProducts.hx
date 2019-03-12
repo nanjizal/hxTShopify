@@ -6,6 +6,7 @@ import hxTShopify.demo.*;
 import hxTShopify.demo.TestOptions;
 import hxTShopify.store.Shop;
 import hxTShopify.t.Image;
+import hxTShopify.t.*;
 import hxTShopify.connection.*;
 import hxTShopify.connection.Https;
 class TestProducts{
