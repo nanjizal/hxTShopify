@@ -34,8 +34,8 @@ class Delete {
                     return;
                 }
                 
-                var https = new Https<ProductHolder>();
-                https.onLoad = function( ps_: ProductHolder ){
+                //var https = new Https<ProductHolder>();
+                //https.onLoad = function( ps_: ProductHolder ){
                     var p_: Product = ps_.product;
                     var id          = Std.string( p_.id );
                     var title       = p_.title;
@@ -49,7 +49,7 @@ class Delete {
                         if( finished != null ) finished(); 
                         if( log != null ) log( 'Deleted $title, $id, $val' );
                     }
-                }
+                    //}
             }
         );
     }
