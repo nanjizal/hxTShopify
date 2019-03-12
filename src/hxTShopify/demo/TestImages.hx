@@ -105,14 +105,14 @@ enum abstract TestPictures ( String ) to String from String {
 class TestImages {
     public static inline var srcPath = 'https://nanjizal.github.io/TestProduct/assets/';
     // oldish
-    public static function create(): Array<Image> {
+    public static function create( col: String ): Array<Image> {
         var images = new Array<hxTShopify.t.Image>();
         var pics = ['hat','jumper','tie','shirt','sock','pants','trousers'];
         var pic = '';
         var l = pics.length;
         for( i in 0...l ){
             pic = pics[ i ];
-            images[ i ] = getImage( i, pic );
+            images[ i ] = getImage( i, col, pic );
         }
         return images;
     }
