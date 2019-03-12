@@ -1,7 +1,7 @@
 package hxTShopify.demo;
 import hxTShopify.t.Image;
 import hxTShopify.demo.TestOptions;
-abstract enum TestPictures ( String ) to String from String {
+enum abstract TestPictures ( String ) to String from String {
     var babyYellowBlueSock;
     var blackDress;
     var blackHat;
