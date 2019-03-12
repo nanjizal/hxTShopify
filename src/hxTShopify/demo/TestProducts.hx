@@ -54,7 +54,7 @@ class TestProducts{
                             , 2.2
                             , [ 'tops','wool']
                             , [ image ] );
-        createProduct( shops[0], product );
+        createProduct( shop, product );
     }
     public function createProduct( shop: Shop, product: Product ){
         var https = new Https<ProductHolder>();
