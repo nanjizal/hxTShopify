@@ -1,5 +1,5 @@
 package hxTShopify.demo;
-import hxTShopify.demo.TestOption;
+import hxTShopify.demo.TestOptions;
 import hxTShopify.t.Variant;
 class TestVariants{
     public var inventoryManagement  = 'shopify';
