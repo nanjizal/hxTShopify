@@ -15,6 +15,7 @@ import hxTShopify.api.Transfer;
 class TestProducts{
     public static var log: String->Void;
     var testVariants: TestVariants;
+    public var onLoad: String->Void;
     var shop: Shop;
     var imageColors = [ 'violet', 'black'
                       , 'indigo',    'blue'
@@ -27,7 +28,7 @@ class TestProducts{
         testVariants = new TestVariants();
     }
     public function deleteHat(){
-        Delete.productDelet( shop, 'hat', log );
+        Delete.productDelete( shop, 'hat', log );
     }
     public function moveHat( targetShop: Shop ){
         moveProduct( targetShop, 'hat' );
@@ -168,11 +169,14 @@ class TestProducts{
                             , images );
         createProduct( shop, product );
     }
+    public var loadCount = 0;
     public function createProduct( shop: Shop, product: Product ){
         var https = new Https<ProductHolder>();
         https.onLoad = function( ps: ProductHolder ){
             var p: Product = ps.product;
             if( log != null ) log( 'loaded ' + Std.string( p ) );
+            loadCount++;
+            if( onLoad != null ) onLoad( product.title );
         }
         https.onError = function( error: String ){
             if( log != null ) log( error );
