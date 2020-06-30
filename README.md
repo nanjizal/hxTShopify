@@ -1,7 +1,7 @@
 # hxTShopify
 Experimental Haxe Shopify Typedefs, and helpers for developing Haxe based shopify private applications, currently setup for use with nodejs and hxElectron. 
 
-[hxTShopify documentation   ](https://nanjizal.github.io/hxTShopify/pages/index.html?i=1) _( serializer.hx ommited for now )_
+[hxTShopify documentation   ](https://nanjizal.github.io/hxTShopify/pages/) _( serializer.hx ommited for now )_
 
 **Demo code included to show creation, deletion and transfer between stores.**
 
