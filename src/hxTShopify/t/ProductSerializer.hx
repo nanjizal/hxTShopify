@@ -1,5 +1,5 @@
 package hxTShopify.t;
-//#if( !doc_gen )
+#if( !doc_gen )
 import hxTShopify.t.Product;
 import hxbit.Serializable;
 
@@ -20,4 +20,4 @@ class ProductSerializer implements hxbit.Serializable {
         return productSerializerOut.product;
     }
 }
-//#end
+#end

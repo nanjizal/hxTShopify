@@ -1,5 +1,5 @@
 -D haxe4
 -cmd haxe generateJS.hxml
--cmd haxelib run dox -i upkeep --title "folderNode API documentation" -D themeColor 0xD4F500 -D textColor 0x000000 -D source-path https://github.com/nanjizal/hxTShopify/tree/master/src/ --toplevel-package hxTShopify
+-cmd haxelib run dox -i upkeep --title "hxTShopify API documentation" -D themeColor 0xD4F500 -D textColor 0x000000 -D source-path https://github.com/nanjizal/hxTShopify/tree/master/src/ --toplevel-package hxTShopify
 -cmd cd pages
 -cmd open index.html
