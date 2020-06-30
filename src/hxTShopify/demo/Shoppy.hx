@@ -18,7 +18,9 @@ import hxTShopify.t.Option;
 import hxTShopify.api.Transfer;
 import hxTShopify.api.Delete;
 import haxe.io.Bytes;
+//#if( !doc_gen )
 import hxbit.Serializer;    
+//#end
 import hxTShopify.api.Calls;
 import hxTShopify.t.*;
 import hxTShopify.connection.*;

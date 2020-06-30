@@ -1,6 +1,8 @@
 package hxTShopify.t;
+//#if( !doc_gen )
 import hxTShopify.t.Product;
 import hxbit.Serializable;
+
 class ProductSerializer implements hxbit.Serializable {
     @:s public var product : Product;
     public function new( product_ ){
@@ -18,3 +20,4 @@ class ProductSerializer implements hxbit.Serializable {
         return productSerializerOut.product;
     }
 }
+//#end

@@ -5,9 +5,8 @@
 -D lime-doc-gen
 -lib hxnodejs
 -lib folderNode
--lib hxbit
--D doc-gen
-#-D no-deprecation-warnings
+#-lib hxbit
+-D no-deprecation-warnings
 --macro include('hxTShopify.api')
 --macro include('hxTShopify.connection')
 --macro include('hxTShopify.demo')
