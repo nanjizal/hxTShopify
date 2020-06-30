@@ -12,5 +12,5 @@ typedef MetaField = {
     @:optional var owner_resource:String;
     var value:                    String; // may not be string see value_type
     var value_type:               String;
-    @:optional: var admin_graphql_api_id: String;
+    @:optional var admin_graphql_api_id: String;
 }

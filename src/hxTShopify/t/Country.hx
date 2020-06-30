@@ -34,7 +34,7 @@ enum abstract Country(String ) from String to String {
     var BN;    // Brunei Darussalam
     var BO;    // Bolivia (Plurinational State of)
     var BQ;    // Bonaire, Sint Eustatius and Saba
-    var BQ;    // previously represented British Antarctic Territory
+    //var BQ;    // previously represented British Antarctic Territory
     var BR;    // Brazil
     var BS;    // Bahamas	
     var BT;    // Bhutan

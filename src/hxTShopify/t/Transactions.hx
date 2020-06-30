@@ -1,5 +1,5 @@
 package hxTShopify.t;
 
 typedef Transactions = {
-    transactions = Array<Transaction>;
+    var transactions: Array<Transaction>;
 }

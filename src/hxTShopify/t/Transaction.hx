@@ -1,4 +1,5 @@
 package hxTShopify.t;
+import hxTShopify.t.Payout;// PayoutStatus
 // payment
 enum abstract TransactionType( String ) from String to String {
     var charge;
@@ -12,7 +13,7 @@ enum abstract TransactionType( String ) from String to String {
     var payout_failure;
     var payout_cancellation;
 }
-enum abstract abstractPayoutType( String ) from String to String {
+enum abstract AbstractPayoutType( String ) from String to String {
     var scheduled;
     var pending;
 }
@@ -29,7 +30,7 @@ typedef Transaction = {
     var type:                           TransactionType;
     var test:                           Bool;
     var payout_id:                      Int;
-    var payout_status:                  PayoutType;
+    var payout_status:                  PayoutStatus;
     var currency:                       Currency;
     var amount:                         Float;
     var fee:                            Float;

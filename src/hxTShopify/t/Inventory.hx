@@ -1,6 +1,6 @@
 package hxTShopify.t;
 // inventory
-typedef Tinventory = {
+typedef Inventory = {
     var id:                     Int;
     var sku:                    String;
     var created_at:             StringDate;

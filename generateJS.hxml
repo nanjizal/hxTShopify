@@ -1,0 +1,23 @@
+# lime dox flags
+-D display
+-D html5
+-D doc_gen
+-D lime-doc-gen
+-lib hxnodejs
+-lib folderNode
+-lib hxbit
+-D doc-gen
+#-D no-deprecation-warnings
+--macro include('hxTShopify.api')
+--macro include('hxTShopify.connection')
+--macro include('hxTShopify.demo')
+--macro include('hxTShopify.store')
+--macro include('hxTShopify.t')
+-cp src
+-main hxTShopify.upkeep.Doc
+--no-output
+
+-xml upkeep/js.xml
+-js foo.js
+
+# -D dump==pretty
